@@ -1,0 +1,51 @@
+package e2u1promedio;
+import java.util.Scanner;
+/**
+ *
+ * @author Jennifer Irlanda Dominguez Cazales
+ */
+public class E2U1Promedio {
+
+    public static void main(String[] args) {
+        Operaciones muestra = new Operaciones();
+        Scanner leer= new Scanner(System.in);
+         int num;
+     boolean a=true;
+     //
+      muestra.estudiantes();
+      //
+     do{
+         System.out.println("\nQue deseas hacer?");
+         System.out.println("1.Mostrar el promedio de toda la clase");
+         System.out.println("2.-Promedio de los 5 primeros");
+         System.out.println("3.-Promedio de los 5 ultimos");
+         System.out.println("4.- Salir"); 
+         num=leer.nextInt();
+         //
+          switch (num) {
+            case 1:
+                    muestra.total();
+            break;
+            case 2:
+                    muestra.primeros();    
+            break;
+            case 3:
+                    muestra.ultimos();
+            break;
+            case 4:
+                    a=false;
+            break;
+            default:
+                    System.out.println("Solo se aceptan numeros enteros del 1 al 4");
+           break;
+          }
+          
+          
+          
+     }while(a);
+        
+        
+        // TODO code application logic here
+    
+    
+}}
